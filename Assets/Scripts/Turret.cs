@@ -11,6 +11,8 @@ public class Turret : MonoBehaviour
 
     public Transform turretHead;
 
+    public float turnSpeed = 10f;
+
     private void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -49,9 +51,11 @@ public class Turret : MonoBehaviour
             return;
         }
 
+        // Target Lock on
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = lookRotation.eulerAngles;
+        //Vector3 rotation = lookRotation.eulerAngles;
+        Vector3 rotation = Quaternion.Lerp(turretHead.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         turretHead.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
