@@ -803,7 +803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panSpeed: 30
   panBorderThickness: 10
-  scrollSpeed: 5
+  scrollSpeed: 10
   minY: 10
   maxY: 80
 --- !u!1 &410087039
