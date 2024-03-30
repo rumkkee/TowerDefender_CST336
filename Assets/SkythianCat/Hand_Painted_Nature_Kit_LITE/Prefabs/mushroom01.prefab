@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33684113749150086}
   - component: {fileID: 23692919015082906}
   m_Layer: 0
-  m_Name: Boletus_edulis01
+  m_Name: mushroom01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
