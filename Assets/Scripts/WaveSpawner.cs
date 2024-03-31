@@ -29,7 +29,7 @@ public class WaveSpawner : MonoBehaviour
     private IEnumerator SpawnWave()
     {
         waveIndex++;
-        Debug.Log($"Wave {waveIndex}");
+        //Debug.Log($"Wave {waveIndex}");
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnemy();
