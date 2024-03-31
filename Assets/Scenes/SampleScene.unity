@@ -1215,6 +1215,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d4bdf4b0d76064eaf1d75c56c2535b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 7632923209309463804, guid: 4ad1d79c0dc801747a93d4d5410514c0,
+      type: 3}
+    cost: 70
+  missileLauncher:
+    prefab: {fileID: 3668216162736732229, guid: 6f1669fb6390c454388ebafe43af7772,
+      type: 3}
+    cost: 140
 --- !u!1001 &593677156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3532,6 +3540,7 @@ GameObject:
   - component: {fileID: 1657278071}
   - component: {fileID: 1657278072}
   - component: {fileID: 1657278073}
+  - component: {fileID: 1657278074}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3587,6 +3596,19 @@ MonoBehaviour:
     type: 3}
   missileLauncherPrefab: {fileID: 3668216162736732229, guid: 6f1669fb6390c454388ebafe43af7772,
     type: 3}
+--- !u!114 &1657278074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657278070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8afa197fc578d4ba6278c1ce8e47aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 400
 --- !u!1001 &1673146885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3863,7 +3885,7 @@ PrefabInstance:
     - target: {fileID: 8928353967536968280, guid: ddcab9f2262d9094cb8d46d2ee3ccf4e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseStandardTurret
+      value: SelectStandardTurret
       objectReference: {fileID: 0}
     - target: {fileID: 8928353967536968280, guid: ddcab9f2262d9094cb8d46d2ee3ccf4e,
         type: 3}
@@ -4043,7 +4065,7 @@ PrefabInstance:
     - target: {fileID: 8928353967536968280, guid: ddcab9f2262d9094cb8d46d2ee3ccf4e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseMissileLauncher
+      value: SelectMissileLauncher
       objectReference: {fileID: 0}
     - target: {fileID: 8928353967536968280, guid: ddcab9f2262d9094cb8d46d2ee3ccf4e,
         type: 3}
