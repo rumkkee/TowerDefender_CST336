@@ -5483,6 +5483,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserBeamer
       objectReference: {fileID: 0}
+    - target: {fileID: 9065972441470905147, guid: f0a66fbfd8217ad4e85f7d13738bb5b3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
