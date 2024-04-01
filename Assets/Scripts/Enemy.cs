@@ -5,9 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed = 10f;
-    public int health = 100;
+    public float health = 100f;
 
-    public int value = 50;
+    public int worth = 50;
 
     public GameObject deathEffect;
 
@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void TakeDamage(int damageAmount)
+    public void TakeDamage(float damageAmount)
     {
         health -= damageAmount;
 
@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        PlayerStats.money += value;
+        PlayerStats.money += worth;
 
         Instantiate(deathEffect, transform.position, Quaternion.identity);
 
