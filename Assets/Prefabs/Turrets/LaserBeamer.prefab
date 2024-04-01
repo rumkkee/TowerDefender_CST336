@@ -288,6 +288,7 @@ MonoBehaviour:
   useLaser: 1
   lineRenderer: {fileID: 322158355016865943}
   impactEffect: {fileID: 3104121410693153970}
+  impactLight: {fileID: 7263375516581464795}
   enemyTag: Enemy
   turretHead: {fileID: 981838226741362761}
   turnSpeed: 10
@@ -532,6 +533,12 @@ PrefabInstance:
 --- !u!198 &3104121410693153970 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2161149745082524736, guid: 1907aeb7aa15a4e40b0926961642ba10,
+    type: 3}
+  m_PrefabInstance: {fileID: 3956974965539807474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &7263375516581464795 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 5919223358641580585, guid: 1907aeb7aa15a4e40b0926961642ba10,
     type: 3}
   m_PrefabInstance: {fileID: 3956974965539807474}
   m_PrefabAsset: {fileID: 0}
