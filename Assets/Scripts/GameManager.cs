@@ -18,10 +18,11 @@ public class GameManager : MonoBehaviour
     {
         if (GameIsOver) { return; }
 
-        if (Input.GetKeyDown("e"))
+        /*if (Input.GetKeyDown("e"))
         {
+            PlayerStats.lives = 0;
             EndGame();
-        }
+        }*/
 
         if(PlayerStats.lives <= 0)
         {
