@@ -33,6 +33,7 @@ public class WaveSpawner : MonoBehaviour
     private IEnumerator SpawnWave()
     {
         waveIndex++;
+        PlayerStats.rounds++;
         //Debug.Log($"Wave {waveIndex}");
         for (int i = 0; i < waveIndex; i++)
         {
