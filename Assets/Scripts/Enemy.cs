@@ -7,6 +7,10 @@ public class Enemy : MonoBehaviour
     public float speed = 10f;
     public int health = 100;
 
+    public int value = 50;
+
+    public GameObject deathEffect;
+
     private Transform target;
     private int wavepointIndex = 0;
 
@@ -57,6 +61,10 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        PlayerStats.money += value;
+
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
+
         Destroy(gameObject);
     }
 
