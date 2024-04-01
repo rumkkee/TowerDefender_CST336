@@ -64,6 +64,13 @@ public class Turret : MonoBehaviour
     {
         if(target == null)
         {
+            if (useLaser)
+            {
+                if (lineRenderer.enabled)
+                {
+                    lineRenderer.enabled = false;
+                }
+            }
             return;
         }
 
@@ -93,6 +100,11 @@ public class Turret : MonoBehaviour
 
     private void Laser()
     {
+        if (!lineRenderer.enabled)
+        {
+            lineRenderer.enabled = true;
+        }
+
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, target.position);
     }
