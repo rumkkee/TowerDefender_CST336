@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,16 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour
 {
     private TurretBlueprint turretToBuild;
+    private Node selectedNode;
+
+    public NodeUI nodeUI;
 
     public GameObject standardTurretPrefab;
     public GameObject missileLauncherPrefab;
 
     public GameObject buildEffect;
+
+
 
     public bool canBuild { get { return turretToBuild != null; } }
     public bool hasMoney { get { return PlayerStats.money >= turretToBuild.cost; } }
@@ -53,8 +59,30 @@ public class BuildManager : MonoBehaviour
 
     }
 
+    public void SelectNode(Node node)
+    {
+        if(selectedNode == node)
+        {
+            DeselectNode();
+            return;
+        }
+
+        selectedNode = node;
+        turretToBuild = null;
+
+        nodeUI.SetTarget(node);
+    }
+
+    private void DeselectNode()
+    {
+        selectedNode = null;
+        nodeUI.Hide();
+    }
+
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
+
+        DeselectNode();
     }
 }
