@@ -25,4 +25,9 @@ public class Board : MonoBehaviour
         return _exit;
     } 
 
+    public Vector3 getExitPos()
+    {
+        return _exit.transform.position;
+    }
+
 }

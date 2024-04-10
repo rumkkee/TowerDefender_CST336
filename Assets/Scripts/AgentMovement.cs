@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class AgentMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private NavMeshAgent nav;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        nav = GetComponent<NavMeshAgent>();
+        nav.destination = Board.instance.getExitPos();
     }
 }
